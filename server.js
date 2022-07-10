@@ -1,13 +1,14 @@
 /*********************************************************************************
-*  WEB700 – Assignment 03
+*  WEB700 – Assignment 04
 *  I declare that this assignment is my own work in accordance with Seneca  Academic Policy.  No part 
 *  of this assignment has been copied manually or electronically from any other source 
 *  (including 3rd party web sites) or distributed to other students.
 * 
-*  Name: Precious Marie Malinnag       Student ID: 147010219   Date: 16 June 2022
+*  Name: PRECIOUS MARIE E. MALINNAG Student ID: 147010219 Date: JULY 10, 2022
+*
+*  Online (Heroku) Link: ________________________________________________________
 *
 ********************************************************************************/ 
-
 
 var HTTP_PORT = process.env.PORT || 8080;
 var express = require("express");
@@ -20,6 +21,7 @@ var collegedata = require('./modules/collegeData')
 // Add middleware for static contents
 app.use(express.static('views'))
 app.use(express.static('modules'))
+app.use(express.static('public'))
 
 // Step 3.a Get students, tas, courses, student num:
 app.get('/students', (req, res) => {
@@ -107,13 +109,13 @@ app.get('*', function(req, res){
     res.send('Page Not Found', 404);
 });
 
-//Step 3.b using CollegeData initialize() to HTTP_PORT
+//using CollegeData initialize() to HTTP_PORT
 collegedata.initialize() 
 .then(app.listen(HTTP_PORT, ()=>{
     
     console.log("server listening on port: " + HTTP_PORT)
 }))
 .catch(err => {
-    console.log("Error in intializing with the json files")
+    console.log("Error in intializing...")
 })
 
