@@ -4,9 +4,7 @@
 *  of this assignment has been copied manually or electronically from any other source 
 *  (including 3rd party web sites) or distributed to other students.
 * 
-*  Name: Precious Marie Malinnag        
-*  Student ID: 147010219 
-*  Date: 16 June 2022
+*  Name: Precious Marie Malinnag       Student ID: 147010219   Date: 16 June 2022
 *
 ********************************************************************************/ 
 
@@ -23,7 +21,7 @@ var collegedata = require('./modules/collegeData')
 app.use(express.static('views'))
 app.use(express.static('modules'))
 
-// Get request for student details
+// Get students, tas, courses, student num:
 app.get('/students', (req, res) => {
 
     if( req.query.course &&  req.query.course !== undefined){
@@ -96,13 +94,11 @@ app.get("/student/:studentnum", (req, res) => {
         })
 })
 
-// setup a 'route' to listen on the default url path
+//these GETs are the links to main menu like home, about, html demo
 app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname,"./views/home.html"));
 });
 
-
-// setup a 'route' to listen on the default url path
 app.get("/htmlDemo", (req, res) => {
     res.sendFile(path.join(__dirname,"./views/htmlDemo.html"));
 });
@@ -112,8 +108,7 @@ app.get('*', function(req, res){
 });
 
 
-// setup http server to listen on HTTP_PORT
-collegedata.initialize()
+collegedata.initialize() //to HTTP port
 .then(app.listen(HTTP_PORT, ()=>{
     
     console.log("server listening on port: " + HTTP_PORT)

@@ -1,17 +1,23 @@
 {
-  "name": "week08_html_form_and_file_upload",
+  "name": "web700_app",
   "version": "1.0.0",
-  "description": "Pritesh Patel",
-  "main": "index.js",
+  "description": "This assignment will consist of our first, working web server created using the Express.js framework. We will continue to use our collegeData module from assignment 2, as well as the \"data\" directory containing our student and course information.  Additionally, we will leverage existing HTML code using the Bootstrap 4 framework to kickstart our own HTML for the assignment.  Lastly, we will practice creating tables, lists, images and media from scratch in an \"HTML Demo\" page.",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js"
+    "test": "test web700_app",
+    "start": "node server.js"
   },
-  "keywords": ["file upload", "express", "html"],
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PMarieMEM/Web700_app.git"
+  },
+  "author": "Precious Marie E. Malinnag (Sub author)",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PMarieMEM/Web700_app/issues"
+  },
+  "homepage": "https://github.com/PMarieMEM/Web700_app#readme",
   "dependencies": {
-    "express": "^4.18.1",
-    "multer": "^1.4.5-lts.1"
+    "express": "^4.18.1"
   }
 }
