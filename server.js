@@ -21,7 +21,7 @@ var collegedata = require('./modules/collegeData')
 app.use(express.static('views'))
 app.use(express.static('modules'))
 
-// Get students, tas, courses, student num:
+// Step 3.a Get students, tas, courses, student num:
 app.get('/students', (req, res) => {
 
     if( req.query.course &&  req.query.course !== undefined){
@@ -107,8 +107,8 @@ app.get('*', function(req, res){
     res.send('Page Not Found', 404);
 });
 
-
-collegedata.initialize() //to HTTP port
+//Step 3.b using CollegeData initialize() to HTTP_PORT
+collegedata.initialize() 
 .then(app.listen(HTTP_PORT, ()=>{
     
     console.log("server listening on port: " + HTTP_PORT)
