@@ -1,31 +1,52 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="theme.css"> 
-        <meta charset="utf-8">
-        <title>My Web Page</title>
-        <style>  
-        
-    </style>
-    </head>
+	<head>
 
+		<title>
+        WEB700_147010219</title>
+		
+        <meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="./public/css/theme.css" type="text/css/"/> <!--inserted css link though theme.css is still empty-->
+    
+    </head>
+    <nav class="navbar navbar-expand-lg navbar-light bg-#2eadd1">
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+					<li class="nav-item"><a class="nav-link" href="home.html"> Home </a>
+                    <li class="nav-item"><a class="nav-link" href="about.html"> About</a> 
+					<li class="nav-item"><a class="nav-link" href="htmlDemo.html">HTMLDemo</a></li>
+				</ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="/students">Students</a></li>
+                <li class="nav-item"><a class="nav-link" href="/tas">Teaching Assistants</a></li>
+                <li class="nav-item"><a class="nav-link" href="/courses">Courses</a></li>
+            </ul>
+        </div>
+    </nav>
     <body>
         <!-- This is a comment -->
-        <h1>Welcome to my website</h1>
+        <h1 style="color: rgb(38, 139, 217);
+        font-size: 24px; text-align: center;">Welcome to my website</h1>
         <article>
             <header>
-                <h3>I will be demonstrating HTML5 principles and techniques, Routing in Express</h3>
-                <nav>
-                    <ul>
-                        <a href="home.html"> Home </a> 
-                        <a href="about.html">  | About </a> 
-                        <a href="htmlDemo.html">  | HTML Demo </a> 
-                    </ul>
-                    
-                </nav>
+                <h5>I will be demonstrating HTML5 principles and techniques, Routing in Express.
+                   
+                </h5>
+               
                 <ol>
                     <p>
-                        <h4>This site utilizes HTML5: a markup language used for structuring and presenting content on the World Wide Web</h4>
+                        <h6>This site utilizes HTML5: a markup language used for structuring and presenting content on the World Wide Web.
+                            This site utilizes HTML5: a markup language used for structuring and presenting content on the World Wide Web.
+                            This site utilizes HTML5: a markup language used for structuring and presenting content on the World Wide Web.
+                            This site utilizes HTML5: a markup language used for structuring and presenting content on the World Wide Web</h6>
                     </p>
                     <a id = "students" href="http://localhost:8080/students"><li>All Students</li></a>
                     <a id = "students" href="http://localhost:8080/students/?course=4"><li>Students by Course</li></a>

@@ -1,24 +1,15 @@
-h1{
-    color: rgb(218, 0, 0);
-    font-size: 12px;
+h1 {
+    font-size: 24pt;
+    font-family: Arial;
 }
-h2{
-    color: rgba(255, 255, 0, 0.925);
-    font-size: 12px;
+
+h5 {
+    font-size: 12pt;
+    font-family: "Sans Serif", Times, serif;
 }
-h3{
-    color: blue;
-    font-size: 12px;
-}
-h4{
-    color: rgb(218, 0, 0);
-    font-size: 12px;
-}
-h5{
-    color: rgba(255, 255, 0, 0.925);
-    font-size: 12px;
-}
-h6{
-    color: blue;
-    font-size: 12px;
+
+h6 {
+    font-size: 12pt;
+    font-style: italic;
+    font-weight: 500
 }
