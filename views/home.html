@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html>
 	<head>
-
+        <style>
+            #grad1 {
+              height: 2048px;
+              background-color: rgb(255, 255, 255); /* For browsers that do not support gradients */
+              background-image: linear-gradient(to right,#2eadd1, #2ed1a3);
+            }
+        </style>
 		<title>
         WEB700_147010219</title>
 		
@@ -37,10 +43,10 @@
         font-size: 24px; text-align: center;">Welcome to my website</h1>
         <article>
             <header>
-                <h5>I will be demonstrating HTML5 principles and techniques, Routing in Express.
-                   
+                <h5 style="color: rgb(63, 65, 66);
+                font-size: 16px; text-align: center; font-style: italic;">I will be demonstrating HTML5 principles and techniques, Routing in Express.
                 </h5>
-               
+
                 <ol>
                     <p>
                         <h6>This site utilizes HTML5: a markup language used for structuring and presenting content on the World Wide Web.
@@ -48,6 +54,7 @@
                             This site utilizes HTML5: a markup language used for structuring and presenting content on the World Wide Web.
                             This site utilizes HTML5: a markup language used for structuring and presenting content on the World Wide Web</h6>
                     </p>
+
                     <a id = "students" href="http://localhost:8080/students"><li>All Students</li></a>
                     <a id = "students" href="http://localhost:8080/students/?course=4"><li>Students by Course</li></a>
                     <a id = "students" href="http://localhost:8080/student/5"><li>A Single Student By Student Number</li></a>
