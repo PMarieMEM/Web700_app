@@ -23,6 +23,7 @@ var collegedata = require('./modules/collegeData')
 app.use(express.static('views'))
 app.use(express.static('modules'))
 app.use(express.static('public'))
+app.use(express.urlencoded({ extended: true }))
 
 // Step Get details for students, tas, courses, student num:
 app.get('/students', (req, res) => {

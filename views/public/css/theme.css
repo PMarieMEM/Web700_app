@@ -1,16 +1,25 @@
+html{
+    height: 100%;
+    margin: auto;
+    width:960px;
+}
+.fixed-footer{
+    bottom: 0;
+}
 
 body {
     background-color: #ffeeee;
     font-family: Arial, sans-serif;
 }
 a:link, a:visited {
-    background-color: #f44336;
+    background-color: rgba(220, 20, 60, 0.895);
     color: white;
-    padding: 14px 25px;
+    padding: 14px 18px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
   }
+
 header {
     position: fixed;
     width: 100%;
@@ -19,6 +28,12 @@ header {
     color: white;
     font-family: 'Exo 2', sans-serif;
     padding: 1em;
+}
+caption{
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: crimson;
+    text-align: center;
 }
 a {
     color: rgb(53, 53, 53);
@@ -72,6 +87,7 @@ h6 {
   }
   
  p{
-      font-size: 12pt;
-      color: rgb(53, 53, 53);
+    font-size: 12pt;
+    color: rgb(53, 53, 53);
+    font-family: "Sans Serif", Times, serif;
   }
