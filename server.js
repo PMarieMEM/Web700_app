@@ -68,6 +68,20 @@ app.get("/tas", (req, res) => {
     })
 })
 
+app.get("/students/add", (req, res) => {
+    collegedata.initialize().then(data => {
+        collegedata.getTAs().then(tas => {
+        res.send(tas)
+        console.log("New student added" )
+        
+        }).catch()
+    }).catch(err => {
+        err = {
+            message : "no results"}
+        res.send()
+    })
+})
+
 app.get("/courses", (req, res) => {
     console.log("Entering courses")
     collegedata.initialize().then(data => {
