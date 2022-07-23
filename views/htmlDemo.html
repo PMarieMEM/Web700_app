@@ -1,37 +1,28 @@
 <!doctype html>
 <html>
     <head>
-        <link rel="stylesheet" href="./public/css/theme.css" type="text/css/"/> 
-		<meta charset="UTF-8">
+        <title>HTML DEMO</title>
+        <link href="./public/css/theme.css"rel="stylesheet"/> 
+        <meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <title>HTML DEMO</title>
     </head>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Student Name</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-					<li class="nav-item"><a class="nav-link" href="home.html"> Home </a>
-                    <li class="nav-item"><a class="nav-link" href="about.html"> About</a> 
-					<li class="nav-item"><a class="nav-link" href="htmlDemo.html">Html Demo</a></li>
-				</ul>
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a class="nav-link" href="/students">Students</a></li>
-                <li class="nav-item"><a class="nav-link" href="/tas">Teaching Assistants</a></li>
-                <li class="nav-item"><a class="nav-link" href="/courses">Courses</a></li>
-            </ul>
-        </div>
-    </nav>
+
     <body>
-        <article>
-            <h1>
+        <header>
+            <h2>
                 Play with HTML code
-            </h1>
+            </h2>
+            <h3>
+                <a class="nav-link" href="home.html"> Home </a>
+                <a class="nav-link" href="about.html"> About</a> 
+                <a class="nav-link" href="htmlDemo.html">Html Demo</a></li>
+                <a class="nav-link" href="/students">Students</a></li>
+                <a class="nav-link" href="/tas">Teaching Assistants</a></li>
+                <a class="nav-link" href="/courses">Courses</a></li>
+            </h3>
+        </header>
+            <article style = "align-items: center; align-content: center;">
                 <table border="1">
                     <caption>Tutorial on HTML</caption>
                     <thead>
@@ -66,9 +57,11 @@
                         <td>10 hours</td>
                     </tfoot>
                 </table>
+                
                 <br>
                 <br>
                 <br>
+
                 <table border="2">
                     <caption>Assessments</caption>
                     <thead>
@@ -145,5 +138,6 @@
                 Successfully rendered video and audio files
             </p>
         </article>
+    
     </body>
 </html>

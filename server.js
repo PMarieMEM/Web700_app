@@ -7,7 +7,7 @@
 *  Name: PRECIOUS MARIE E. MALINNAG Student ID: 147010219 Date: JULY 10, 2022
 *
 *  Online (Github) Link: https://github.com/PMarieMEM/Web700_app.git
-   Online (Heruko) Link:https://web700-app-pmalinnag.herokuapp.com/
+   Online (Heruko) Link: https://thawing-thicket-87920.herokuapp.com/ 
 *
 ********************************************************************************/ 
 
