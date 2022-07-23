@@ -30,6 +30,13 @@ a:hover{
     text-decoration: none;
 }
 
+table, th, td {
+    border: 1px solid;
+    background-color: rgb(255, 255, 255);
+    border-color: black;
+    color: crimson;
+    box-shadow:black;
+  }
 h1 {
       font-size: 36pt;
       font-family: Impact, Haettenschweiler, 'Arial Narrow', sans-serif;
