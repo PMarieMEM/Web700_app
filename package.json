@@ -18,9 +18,10 @@
   },
   "homepage": "https://github.com/PMarieMEM/Web700_app#readme",
   "dependencies": {
-    "express": "^4.18.1"
+    "express": "^4.18.1",
+    "express-handlebars": "^6.0.6"
   },
-  "devDependencies": {},
+
   "keywords": [
     "html",
     "css"
