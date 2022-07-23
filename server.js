@@ -24,7 +24,7 @@ app.use(express.static('views'))
 app.use(express.static('modules'))
 app.use(express.static('public'))
 
-// Step 3.a Get students, tas, courses, student num:
+// Step Get details for students, tas, courses, student num:
 app.get('/students', (req, res) => {
 
     if( req.query.course &&  req.query.course !== undefined){
