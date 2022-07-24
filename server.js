@@ -67,8 +67,8 @@ app.listen(HTTP_PORT, onHttpStart);
     });
 
 // Step Get details for students, tas, courses, student num:
-app.get('/students', (req, res) => {
-
+app.get("/students", function(req, res) { //render update for students_assign5
+    res.render("students", { students: students});
     if( req.query.course &&  req.query.course !== undefined){
         let courseFromParams = req.query.course;
         console.log(courseFromParams);
@@ -93,8 +93,9 @@ app.get('/students', (req, res) => {
                 message : "no results"}
             res.send()
         })
-    }
-})
+    } 
+   
+      });
 
 app.get("/tas", (req, res) => {
     collegedata.initialize().then(data => {
@@ -114,27 +115,12 @@ app.get("/students/add", (req, res) => {
         collegedata.getTAs().then(tas => {
         res.send(tas)
         console.log("New student added" )
-        
         }).catch()
-    }).catch(err => {
-        err = {
-            message : "no results"}
-        res.send()
-    })
 })
 
-app.get("/courses", (req, res) => {
-    console.log("Entering courses")
-    collegedata.initialize().then(data => {
-        collegedata.getCourses().then(courses => {
-        res.send(courses)
-        console.log("courses suceeded" )
-        }).catch()
-    }).catch(err => {
-        err = {
-            message : "no results"}
-        res.send()
-    })
+app.get("/Courses", function(req, res) { //render update for courses_assign5
+        console.log("Entering courses")
+        res.render("Courses", { Courses: Courses });
 })
 
 app.get("/student/:studentnum", (req, res) => {
