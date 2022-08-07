@@ -14,9 +14,10 @@
 
 var HTTP_PORT = process.env.PORT || 8080;
 var express = require("express");
+var app = express();
 var path = require("path")
 var exphbs = require('express-handlebars'); //assign 5 update
-var app = express();
+
 
 const collegedata = require('./modules/collegeData')
 
@@ -26,14 +27,6 @@ app.use(express.static('modules'))
 app.use(express.static('public'))
 app.use(express.urlencoded({ extended: true }));
 
-
-//assign 5 update starts here
-// setup our requires 
-const HTTP_PORT = 8080;
-const express = require("express");
-const exphbs = require("express-handlebars");
-
-const app = express();
 // Register handlebars as the rendering engine for views
 app.engine({
     extname: ".hbs", defaultLayout: "main",
@@ -73,10 +66,6 @@ function navLink(url, options) {
       "</a></li>"
     );
 }  
-// call this function after the http server starts listening for requests
-function onHttpStart() {
-    console.log("Express http server listening on: " + HTTP_PORT);
-}
 
 function handleStudents(req, res) {
     const course = req.query["courseId"];
@@ -242,14 +231,6 @@ function updateCourse(req, res) {
 //       layout: false // do not use the default Layout (main.hbs)
 //  });
 //);
-
-// start the server to listen on HTTP_PORT
-app.listen(HTTP_PORT, onHttpStart);
-//assign 5 update ends here
-    res.render('viewData', {
-        data: someData,
-        layout: false // do not use the default Layout (main.hbs)
-    });
 
 //update for the functions thr handlebars:
 app.get("/students", handleStudents);
