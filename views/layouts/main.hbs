@@ -1,31 +1,33 @@
 
-<div class="container">
-			<div class="row">
-				<main class="col-md-12">
-                    
-					<!-- Start your code here -->
-                    <!DOCTYPE html>
-                    <html>
-                        <head>
-                            <title> WEB700_APP_PMALINNAG </title>
-                            <link rel="stylesheet" href="./public/css/theme.css"/> 
-                            <meta charset="UTF-8">
-                            <meta http-equiv="X-UA-Compatible" content="IE=edge">
-                            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                        </head>
-                        <body>
-                            <h1>Welcome to my website</h1>
-                                <h3>
-                                        <a class="nav-link" href="home.html"> Home </a>
-                                        <a class="nav-link" href="about.html"> About</a> 
-                                        <a class="nav-link" href="htmlDemo.html">HTMLDemo</a></li>
-                                        
-                                        <a class="nav-link" href="addStudent.html">Add Student</a></li>
-                                        <a class="nav-link" href="/students">Students</a></li>
-                                        <a class="nav-link" href="/tas">Teaching Assistants</a></li>
-                                        <a class="nav-link" href="/courses">Courses</a></li>
-                                </h3>
-                                <hr />
+<html>
+    <head>
+        <title> WEB700_APP_PMALINNAG </title>
+            <meta charset="UTF-8">
+    <link rel="stylesheet" href="./public/css/theme.css"/> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <nav class='navbar navbar-expand-lg navbar-light bg-light'></nav>
+            <h1>Welcome to my website</h1>
+                <div class='collapse navbar-collapse' id='navbarSupportedContent'>
+                    <ul class='navbar-nav mr-auto'>
+                    <h3>
+                    {{#navLink'/'}}Home {{/navLink}}
+                    {{#navLink'/about'}}About{{/navLink}}
+                    {{#navLink'/htmlDemo'}}HTMLDemo{{/navLink}}                                       
+                    {{#navLink'/addStudent'}}Add Student{{/navLink}}
+                    {{#navLink'/students'}}Students{{/navLink}}
+                    {{#navLink'/tas'}}Teaching Assistants{{/navLink}}
+                    {{#navLink'/courses'}}Courses{{/navLink}}
+                    </h3>
+                    </ul>
+                </div>
+        </nav>
+        <div class='container'>
+            {{{body}}}
+        </div>
+                <hr />
                             
                             <article>
                                 
@@ -39,11 +41,10 @@
                                             </p>
                                         </br></br>
                                         <h6>
-                                        <a id = "students" href="http://localhost:8080/students"><li>All Students</li></a> 
-                                        <a id = "students" href="http://localhost:8080/students/?course=4"><li>Students by Course</li></a></br></br>
-                                        <a id = "students" href="http://localhost:8080/student/5"><li>A Single Student By Student Number</li></a>
-                                        <a id = "students" href="http://localhost:8080/tas"><li>All Managers</li></a>
-                                        <a id = "students" href="http://localhost:8080/Courses"><li>All Courses</li></a>
+                                        {{#navLink'/students'}} All Students{{/navLink}}
+                                        {{#navLink'/student'}}Students by Course{{/navLink}}</br></br>
+                                        {{#navLink'/students'}}Student By Student Number{{/navLink}}
+                                        {{#navLink'/course'}}All Courses{{/navLink}}
                                         </h6>
                             
                             </article>
@@ -53,7 +54,3 @@
                         </body>
                     </html>
                     <!-- End your code here  -->
-
-				</main>
-			</div>
-		</div>
