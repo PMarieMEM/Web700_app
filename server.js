@@ -8,8 +8,8 @@
 *  Name: PRECIOUS MARIE E. MALINNAG Student ID: 147010219 Date: JULY 10, 2022
 *
 *  Online (Github) Link: https://github.com/PMarieMEM/Web700_app.git
-   Online (Heruko) Link: https://stormy-anchorage-29789.herokuapp.com/ 
-*
+   Online (Heruko) Link: https://shielded-coast-69036.herokuapp.com/
+                        https://git.heroku.com/shielded-coast-69036.git
 ********************************************************************************/ 
 
 var HTTP_PORT = process.env.PORT || 8080;
