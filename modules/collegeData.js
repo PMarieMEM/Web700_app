@@ -1,19 +1,13 @@
-const Sequalize = require("sequelize");
+const Sequalize = require("Sequelize");
 
-class Data{
-    constructor(students, courses){
-        this.students = students;
-        this.courses = courses;
-    }
-}
-var sequelize = new Sequelize("database", "user", "password", {
+var Sequelize = new Sequelize("database", "user", "password", {
     host: "gost", dialect: "postgres", port: 5432, dialectOptions: {
       ssl: { rejectUnauthorized: false },
     },
     query: { raw: true },
   });
   
-var Student = sequelize.define("Student", {
+var Student = Sequelize.define("Student", {
     studentNum: {
       type: Sequelize.INTEGER,
       primaryKey: true,
@@ -28,7 +22,7 @@ var Student = sequelize.define("Student", {
     TA: Sequelize.BOOLEAN, status: Sequelize.STRING,
 });
   
-var Course = sequelize.define("Course", {
+var Course = Sequelize.define("Course", {
     courseId: {
       type: Sequelize.INTEGER,
       primaryKey: true,
