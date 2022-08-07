@@ -1,15 +1,38 @@
-<div class="row">
-    <div class="col-md-12">
-          <br>
-          <h2>Courses</h2>
-          <hr />
+<div class='row'>
+    <div class='col-md-12'>
+        <div class='card mt-2'>
+            <div class='card-body'>
+                <h2>{{course.courseDescription}}</h2>
+                <hr />
+                <form method='POST' action='/course/update'>
+                    <div class='row'>
+                        <div class='col-md-3'>
+                            <div class='form-group'> 
+                                <label for='courseDescription'>Course Code</label>
+                                <input
+                                class='form-control'
+                                id='courseCode'
+                                name='courseCode'
+                                type='text'
+                                value='{{course.courseCode}}'
+                                />
+                            </div>
+                                        <br>
+                                        <h2>Courses</h2>
+                                        <hr />
 
-          <p>TODO: render a list of all course id's and names here</p>
-            <p>
-                {{#each Courses}}
-                    <p>Course ID: {{courseId}}</p>
-                    <p>Course Code: {{courseCode}}</p>
-                    <p>Course Description: {{courseDescription}}</p>         
-                {{/each}}
+                                        <p>TODO: render a list of all course id's and names here</p>
+                                            <p>
+                                                {{#each Courses}}
+                                                    <p>Course ID: {{courseId}}</p>
+                                                    <p>Course Code: {{courseCode}}</p>
+                                                    <p>Course Description: {{courseDescription}}</p>         
+                                                {{/each}}
+                                            </p>
+                        </div>
+                    </div>                   
+                </form>
+            </div>
+        </div>    
     </div>
 </div>

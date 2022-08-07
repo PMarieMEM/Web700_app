@@ -1,13 +1,46 @@
 <div class="row">
     <div class="col-md-12">
-        <br>
-            <h2>Students</h2>
-            <hr />
-            <p>TODO: render a list of all course id's and names here</p></br>
-            <p> {{#each students}}
-                    <p>Last Name: {{lastName}}</p>
-                    <p>First Name: {{firstName}}</p>           
-                {{/each}}
-            </p>
+    <div class='card mt-2'>
+        <div class='card-body'>
+            <br>
+                    <h2>Students</h2>
+                    <hr />
+                <a href="/students/add" class="btn btn-success float-right">Add New Student</a>
+                <div class='table-responsive'>
+                    <table class='table'>
+                    <thead>
+                        <th>Student ID</th>
+                        <th>Last Name</th>
+                        <th>First Name</th>
+                        <th>Email Addr</th>
+                        <th>Addrress</th>
+                        <th>Status</th>
+                        <th>Course ID</th>                    
+                    </thead>
+                    <tbody>
+                    <p> 
+                        {{#each students}}
+                        <tr>
+                        <td>{{studentNum}}</td>
+                        <td><a href='/student/{{studentNum}}'>{{firstName}}
+                            {{lastName}}</a></td>
+                        <td><a href='mailto:{{email}}'>{{email}}</a></td>
+                        <td>{{addressStreet}}, {{addressCity}}</td>
+                        <td>{{status}}</td>
+                        <td><a href='/students?courseId={{course}}'>{{course}}</a> </td>
+                        <td><a href='/student/delete/{{studentNum}}' class="btn btn-sm btn-danger">Remove</a> </td>         
+                        </tr>
+                        {{/each}}
+                    </p>
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
     </div>
+    {{#unless students}}
+    <div class='col-md-12 text-center'>
+      <strong>{{message}}</strong>
+    </div>
+    {{/unless}}
 </div>

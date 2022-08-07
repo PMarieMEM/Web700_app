@@ -19,11 +19,14 @@
   "homepage": "https://github.com/PMarieMEM/Web700_app#readme",
   "dependencies": {
     "express": "^4.18.1",
-    "express-handlebars": "^6.0.6"
+    "express-handlebars": "^6.0.6",
+    "pg" :"^8.7.3",
+    "pg-hstore" :"^2.3.4",
+    "sequelize": "6.21.3"
   },
 
   "keywords": [
     "html",
     "css"
-  ]
+  ],  
 }
